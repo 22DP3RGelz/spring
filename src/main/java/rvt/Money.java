@@ -30,17 +30,20 @@ public class Money{
     }
     
     public Money plus(Money addition) {
-        Money newMoney = new Money(); 
+        mac3 = 
 
-        int EurotoCents = this.cents + this.euros / 100;
+       int EuroToCents = cents() + euros() / 100;
+       int EuroToCentsSec = addition.cents() + addition.euros() / 100;
+
+
+
         
-        return newMoney;
     }
 
-    public Money LessThen(Money addition){
-        Money newMoney = new Money();
+    public Money LessThen(){
+        Money newMoney = new Money(euros, cents);
 
-
+        return newMoney;
     }
 
 
