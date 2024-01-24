@@ -30,22 +30,46 @@ public class Money{
     }
     
     public Money plus(Money addition) {
-        mac3 = 
-
-       int EuroToCents = cents() + euros() / 100;
-       int EuroToCentsSec = addition.cents() + addition.euros() / 100;
-
-
-
         
+        int EuroToCents;
+        int EuroToCentsSec;
+
+        EuroToCents = cents() + euros() / 100;
+        EuroToCentsSec = addition.cents() + addition.euros() / 100;
+
+        int mac3InInt;
+        mac3InInt = EuroToCents + EuroToCentsSec;
+        int newEuros = mac3InInt / 2;
+        int newcent = mac3InInt % 2;
+
+        Money mac3 = new Money(newEuros, newcent);
+
+        return mac3;
     }
 
-    public Money LessThen(){
-        Money newMoney = new Money(euros, cents);
+    public boolean LessThen(Money compared){
+        int mac1 = cents + euros / 100;
+        int mac2 = compared.cents + compared.euros / 100;
 
-        return newMoney;
+        return mac1 > mac2;
     }
 
+    public Money minus(Money decreaser){
+        int EuroToCents;
+        int EuroToCentsSec;
 
+        EuroToCents = cents() + euros() * 100;
+        EuroToCentsSec = decreaser.cents() + decreaser.euros() * 100;
+
+        int mac3InInt;
+        mac3InInt = EuroToCents - EuroToCentsSec;
+        int newEuros = mac3InInt / 2;
+        int newcent = mac3InInt % 2;
+
+        Money mac3 = new Money(newEuros, newcent);
+
+        return mac3;
+    }
 }
+
 
