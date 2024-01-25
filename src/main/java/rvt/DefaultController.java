@@ -24,22 +24,23 @@ public class DefaultController {
     //     return modelAndView;
     // }
 
-    @GetMapping(value = "/test")
-    public ModelAndView testAction() {
+    // @GetMapping(value = "/test")
+    // public ModelAndView testAction() {
         
-        ModelAndView modelAndView = new ModelAndView("test");
-        Money mac1 = new Money(10, 50);
-        Money mac2 = new Money(2, 80);
+    //     // ModelAndView modelAndView = new ModelAndView("test");
+    //     // Money mac1 = new Money(10, 50);
+    //     // Money mac2 = new Money(2, 80);
         
-        Money mac3 = mac1.plus(mac2);
+    //     // Money mac3 = mac1.plus(mac2);
 
-        modelAndView.addObject("result", mac3);
+    //     // modelAndView.addObject("result", mac3);
 
-        return modelAndView;
-    }
+    //     // return modelAndView;
+    // }
 
-    
+    int [] numbers = {2,7,6,4,21,35,2,7};
 
+    int startIndex = 4;
         
     
 }
