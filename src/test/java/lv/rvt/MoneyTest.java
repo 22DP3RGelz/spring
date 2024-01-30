@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import rvt.Money;
+import rvt.Search;
 
 public class MoneyTest {
 
@@ -30,5 +31,12 @@ public class MoneyTest {
 
         assertEquals(4,rezult1.euros());
         assertEquals(74,rezult1.cents());
+    }
+
+    @Test
+    public void testBinarySearch(){
+        int[] arr = {-2,0,4,8,12};
+        int rezult = Search.binarySearch(arr, 0);
+        assertEquals(rezult, 0);
     }
 }
