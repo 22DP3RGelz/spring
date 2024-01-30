@@ -38,9 +38,6 @@ public class Sorter {
         return rezult;
     }
 
-    public static void swap(int[] numbers, int index1, int index2) {
-       
-    }
 
 
 }

@@ -26,7 +26,7 @@ public class MoneyTest {
         Money mon1 = new Money(1, 85);
         Money mon2 = new Money(2, 90);
 
-        Money rezult1 = mon1.LessThen(mon2);
+        Money rezult1 = mon1.minus(mon2);
 
         assertEquals(4,rezult1.euros());
         assertEquals(74,rezult1.cents());
