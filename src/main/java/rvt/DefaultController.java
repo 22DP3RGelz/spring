@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 // import org.springframework.web.bind.annotation.GetMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class DefaultController {
@@ -38,10 +40,16 @@ public class DefaultController {
     //     // return modelAndView;
     // }
 
-    int [] numbers = {2,7,6,4,21,35,2,7};
+    // int [] numbers = {2,7,6,4,21,35,2,7};
 
-    int startIndex = 4;
+    // int startIndex = 4;
         
+    @GetMapping(value = "/register")
+    public ModelAndView newregister(){
+        ModelAndView modelAndView = new ModelAndView("register");
+        return modelAndView;
+    }
+
     
 }
 
