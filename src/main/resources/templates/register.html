@@ -1,19 +1,42 @@
 <html>
 <body>
 
-<h2>Register Forms</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devise-width, initial-scale=1.0">
+  <title>Project101</title>
+  <link rel="stylesheet" type="text/css" href="/css/register.css">
+</head>
 
-<form action="register">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" placeholder="Ievadiet savu vārdu"><br>
 
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" placeholder="Ievadiet savu uzvārdu"><br><br>
+<div align="center">
+  <form action="register">
+    <h2>Register Forms</h2>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Ievadiet savu vārdu"><br>
 
-  <input type="submit" value="Submit">
-</form> 
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Ievadiet savu uzvārdu"><br>
 
-<p>Kaut kas strada</p>
+    <label for="Birthday">Birthday (yyyy-mm-dd):</label><br>
+    <input type="date" id="bday" name="bday" placeholder="Ievadies savu dzimšanas dienu"><br>
 
+    <label for="Gender">Gender:</label><br>
+    <input type="radio" id="Gender" value="woman" name="Gender">woman
+    <input type="radio" id="Gender" value="man" name="Gender">man<br>
+
+    <label for="Group">Grupa:</label><br>
+    <select name="Group">
+      <option value="DP2-1">DP2-1</option>
+      <option value="DP2-2">DP2-1</option>
+      <option value="DP2-3">DP2-3</option>
+      <option value="DP2-4">DP2-4</option>
+    </select><br>
+
+    <input type="submit" value="Submit">
+  </form> 
+
+  <p>Kaut kas strada</p>
+</div>
 </body>
 </html>
