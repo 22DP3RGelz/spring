@@ -1,42 +1,40 @@
+<!DOCTYPE html>
 <html>
-<body>
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=devise-width, initial-scale=1.0">
-  <title>Project101</title>
-  <link rel="stylesheet" type="text/css" href="/css/register.css">
+  <title>User Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/css/register.css">
 </head>
-
-
 <div align="center">
-  <form action="register">
-    <h2>Register Forms</h2>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" placeholder="Ievadiet savu vārdu"><br>
+  <h1>User Register</h1>
+  <form method="post" th:action="@{/register}" th:object="${user}">
 
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" placeholder="Ievadiet savu uzvārdu"><br>
+    <label for="fname" >First name:</label>
+    <input type="text" th:field="*{name}" id="fname" name="fname" required><br>
 
-    <label for="Birthday">Birthday (yyyy-mm-dd):</label><br>
-    <input type="date" id="bday" name="bday" placeholder="Ievadies savu dzimšanas dienu"><br>
+    <label for="email">Email:</label>
+    <input type="text" th:field="*{email}" id="email" name="email" required><br>
 
-    <label for="Gender">Gender:</label><br>
-    <input type="radio" id="Gender" value="woman" name="Gender">woman
-    <input type="radio" id="Gender" value="man" name="Gender">man<br>
+    <label for="password">Password:</label>
+    <input type="password" th:field="*{password}" id="password" name="password" required><br>
 
-    <label for="Group">Grupa:</label><br>
-    <select name="Group">
+    <label for="birthday">Birthday(dd-mm-yyyy):</label>
+    <input type="date" id="birthday" th:field="*{birthday}" name="birthday"><br>
+
+    <label for="groups">Groups:</label>
+    <select id="groups" name="groups" th:field="*{groups}">
       <option value="DP2-1">DP2-1</option>
-      <option value="DP2-2">DP2-1</option>
+      <option value="DP2-2">DP2-2</option>
       <option value="DP2-3">DP2-3</option>
-      <option value="DP2-4">DP2-4</option>
+      <option value="DP2-4">DP2-4</option><br>
     </select><br>
 
-    <input type="submit" value="Submit">
-  </form> 
-
-  <p>Kaut kas strada</p>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="gender" th:field="*{gender}" name="gender" value="Male">Male
+    <input type="radio" id="gender" th:field="*{gender}" name="gender" value="Female">Female<br>
+    
+    <input type="submit" value="Register">
+  </form>
 </div>
-</body>
 </html>
