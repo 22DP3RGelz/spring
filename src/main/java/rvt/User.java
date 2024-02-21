@@ -19,10 +19,9 @@ public class User {
     @Pattern(regexp = "^[a-zA-Z]+$", message = "Only letters are allowed")
     private String name;
 
+    
 
-    private String surname;
-
-    private int age;
+    
 
     private String password;
 
@@ -30,10 +29,7 @@ public class User {
 
     private String gender;
 
-    private boolean married;
-
-    private String note;
-
+    
     @Email
     private String email;
 
@@ -44,13 +40,11 @@ public class User {
     return String.format(
     "{%s, %s, %s, %s, %s, %s, %s, %s, %s, %s}",
     this.name,
-    this.surname,
-    this.age,
+    
+    
     this.password,
     this.birthday,
     this.gender,
-    this.married,
-    this.note,
     this.email,
     this.groups);
     }
