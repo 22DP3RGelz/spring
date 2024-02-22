@@ -48,27 +48,32 @@ public class DefaultController {
     //     return modelAndView;
     // }
 
-    // int [] numbers = {2,7,6,4,21,35,2,7};
+    // @GetMapping(value = "/test")
+    // ModelAndView testAction(){   
+    
+    //     ModelAndView ModelAndView = new ModelAndView("test");
+    //     Book book1 = new Book("Fyodor Dostoevsky", "Crime and Punishment", 2.0);
+    //     Book book2 = new Book("Robert Martin", "Clean Code", 1.0);
+    //     Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
 
-    // int startIndex = 4;
+    //     CD cd1 = new CD("Pink Floyd", "Dark Side of the Moon", 1973);
+    //     CD cd2 = new CD("Wigwam", "Nuclear Nightclub", 1975);
+    //     CD cd3 = new CD("Rendezvous Park", "Closer to Being Here", 2012);
+
+
+    //     ModelAndView.addObject("rez", book1);
+
+    //     return ModelAndView;
+    // }
 
     @GetMapping(value = "/test")
-        ModelAndView testAction(){   
-            
-            ModelAndView ModelAndView = new ModelAndView("test");
-            Book book1 = new Book("Fyodor Dostoevsky", "Crime and Punishment", 2.0);
-            Book book2 = new Book("Robert Martin", "Clean Code", 1.0);
-            Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
-
-            CD cd1 = new CD("Pink Floyd", "Dark Side of the Moon", 1973);
-            CD cd2 = new CD("Wigwam", "Nuclear Nightclub", 1975);
-            CD cd3 = new CD("Rendezvous Park", "Closer to Being Here", 2012);
-
-
-            ModelAndView.addObject("rez", book1);
-
-            return ModelAndView;
-        }
+    ModelAndView testAction(){
+        ModelAndView ModelAndView = new ModelAndView("test");
+        Person anna = new Person("Anna", Education.PHD);
+        
+        ModelAndView.addObject("rez", anna);
+        return ModelAndView;
+    }
         
 
     @GetMapping(value = "/")
